@@ -1,0 +1,94 @@
+<html>
+<head>
+    <title>Christmas Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1a1a2e;
+            color: #d4af37;
+            font-family: 'Mountains of Christmas', cursive;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .tree {
+            width: 200px;
+            height: 300px;
+            position: relative;
+        }
+        .tree svg {
+            width: 100%;
+            height: auto;
+        }
+        .message {
+            font-size: 2.5em;
+            margin-top: 20px;
+        }
+        .from {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .draw {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: draw 5s forwards;
+        }
+        @keyframes draw {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+        .star {
+            fill: #d4af37;
+            animation: twinkle 1s infinite alternate;
+        }
+        @keyframes twinkle {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0.5;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tree">
+            <svg viewBox="0 0 200 300">
+                <path class="draw" d="M100 10 L90 30 L110 30 L80 60 L120 60 L70 100 L130 100 L60 150 L140 150 L50 200 L150 200 L40 250 L160 250 L30 300" fill="none" stroke="#d4af37" stroke-width="2"/>
+                <polygon class="draw" points="100,0 105,10 115,10 107,15 110,25 100,20 90,25 93,15 85,10 95,10" fill="#d4af37" stroke="#d4af37" stroke-width="2"/>
+                <circle class="star" cx="90" cy="30" r="3"/>
+                <circle class="star" cx="110" cy="30" r="3"/>
+                <circle class="star" cx="80" cy="60" r="3"/>
+                <circle class="star" cx="120" cy="60" r="3"/>
+                <circle class="star" cx="70" cy="100" r="3"/>
+                <circle class="star" cx="130" cy="100" r="3"/>
+                <circle class="star" cx="60" cy="150" r="3"/>
+                <circle class="star" cx="140" cy="150" r="3"/>
+                <circle class="star" cx="50" cy="200" r="3"/>
+                <circle class="star" cx="150" cy="200" r="3"/>
+                <circle class="star" cx="40" cy="250" r="3"/>
+                <circle class="star" cx="160" cy="250" r="3"/>
+                <circle class="star" cx="30" cy="300" r="3"/>
+                <circle class="star" cx="170" cy="300" r="3"/>
+            </svg>
+        </div>
+        <div class="message">
+            MERRY CHRISTMAS!
+        </div>
+        <div class="from">
+            FROM AIZ
+        </div>
+    </div>
+</body>
+</html>
